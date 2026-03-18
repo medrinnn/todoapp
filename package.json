@@ -14,9 +14,6 @@
   "author": "medrinnn",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {
-    "test": "dev"
-  },
   "dependencies": {
     "css-loader": "^7.1.4",
     "html-loader": "^5.1.0",
@@ -25,5 +22,9 @@
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2",
     "webpack-dev-server": "^5.2.3"
+  },
+  "scripts":{
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js"
   }
 }
