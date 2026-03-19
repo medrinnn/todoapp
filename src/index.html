@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="sidebar">
+        <div class="app-title">⭐ Todo App</div>
+
+        <button class="new-project-btn">New Project</button>
+
+        <div class="project-list">
+          <div class="project">
+            <h2>Default</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="top-bar">
+          <h2 class="project-title">Default</h2>
+          <button class="newTaskBtn">+ New Task</button>
+        </div>
+        <div class="task-list">
+          <div class="task">
+            <input type="checkbox">
+            <label>Hi</label>
+          </div>
+      </div>
+
     <script type="module" src="index.js"></script>
-</body>
+  </body>
 </html>
