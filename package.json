@@ -1,14 +1,14 @@
 {
-  "name": "webpack-template",
+  "name": "todoapp",
   "version": "1.0.0",
-  "description": "Webpack Template for personal use",
-  "homepage": "https://github.com/medrinnn/webpack-template#readme",
+  "description": "todo app bullshit",
+  "homepage": "https://github.com/medrinnn/todoapp#readme",
   "bugs": {
-    "url": "https://github.com/medrinnn/webpack-template/issues"
+    "url": "https://github.com/medrinnn/todoapp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/medrinnn/webpack-template.git"
+    "url": "git+https://github.com/medrinnn/todoapp.git"
   },
   "license": "ISC",
   "author": "medrinnn",
