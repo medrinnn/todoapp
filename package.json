@@ -23,8 +23,11 @@
     "webpack-cli": "^7.0.2",
     "webpack-dev-server": "^5.2.3"
   },
-  "scripts":{
+  "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js"
+  },
+  "devDependencies": {
+    "date-fns": "^4.1.0"
   }
 }

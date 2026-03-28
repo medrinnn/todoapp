@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
 
-  <body>
-    <div class="app">
-      <div class="sidebar">
-        <div class="app-title">⭐ Todo App</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="app-title">⭐ Todo App</div>
+      <button class="new-project-btn">New Project</button>
+      <div class="project-list"></div>
+    </aside>
 
-        <button class="new-project-btn">New Project</button>
+    <!-- Main -->
+    <main class="main-content">
+      <div class="top-bar">
+        <h2 class="project-title">Default</h2>
+        <button class="newTaskBtn">+ New Task</button>
+      </div>
+      <div class="task-list"></div>
 
-        <div class="project-list">
-          
+      <!-- Task Info Panel -->
+      <div class="task-info" id="taskInfo">
+        <h3 id="taskTitle"></h3>
+        <p id="taskDescription"></p>
+        <p>Due: <span id="taskDueDate"></span></p>
+        <p>Priority: <span id="taskPriority"></span></p>
+        <div class="task-info-actions">
+          <button class="task-edit-btn" id="taskEditBtn">✏️ Edit</button>
+          <button class="task-delete-btn" id="taskDeleteBtn">🗑 Delete</button>
         </div>
       </div>
+    </main>
 
-      <div class="main-content">
-        <div class="top-bar">
-          <h2 class="project-title">Default</h2>
-          <button class="newTaskBtn">+ New Task</button>
-        </div>
-        <div class="task-list">
-          <div class="task">
-            <input type="checkbox">
-            <label>Hi</label>
-          </div>
-      </div>
+  </div>
 
-      <dialog id="projectDialog">
-        <h2>New Project</h2>
-        <form id="projectForm">
-          <input type="text" id="title" placeholder="Title" required>
-        </form>
-      </dialog>
+  <!-- Project Dialog -->
+  <dialog id="projectDialog">
+    <h2>New Project</h2>
+    <form id="projectForm">
+      <input type="text" id="projectTitleValue" placeholder="Project Name" required />
+      <button type="submit">Add Project</button>
+    </form>
+  </dialog>
 
-    <script type="module" src="index.js"></script>
-  </body>
+  <!-- Add Task Dialog -->
+  <dialog id="taskDialog">
+    <h2>New Task</h2>
+    <form id="taskForm">
+      <input type="text" id="taskTitleValue" placeholder="Title" required />
+      <input type="text" id="taskDescriptionValue" placeholder="Description" required />
+      <input type="date" id="taskDueDateValue" required />
+      <select id="taskPriorityValue" required>
+        <option value="High">High</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+  </dialog>
+
+  <!-- Edit Task Dialog -->
+  <dialog id="editTaskDialog">
+    <h2>Edit Task</h2>
+    <form id="editTaskForm">
+      <input type="text" id="editTaskTitleValue" placeholder="Title" required />
+      <input type="text" id="editTaskDescriptionValue" placeholder="Description" required />
+      <input type="date" id="editTaskDueDateValue" required />
+      <select id="editTaskPriorityValue" required>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button type="submit">Save Changes</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="index.js"></script>
+</body>
 </html>
